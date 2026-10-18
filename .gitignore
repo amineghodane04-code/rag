@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Local tools
+.bin/
+.uv/
+
+# Generated indexes and datasets
+*.pkl
+output/index/
+data/processed/
+data/output/
+data/datasets/
+
+# Downloaded source repositories
+vllm-*/
