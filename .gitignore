@@ -1,0 +1,31 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Type check and lint caches
+.mypy_cache/
+.flake8
+
+# Data, index, and models (excluded from Git per subject)
+data/
+*.pkl
+*.pickle
+models/
+output/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+
+# Moulinette and exam scripts
+moulinette*
+exams/
+*.zip
+*.pdf

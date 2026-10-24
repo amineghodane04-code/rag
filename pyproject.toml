@@ -1,0 +1,43 @@
+[project]
+name = "rag-against-the-machine"
+version = "1.0.0"
+description = "Simple, clean, and robust RAG system for codebases"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "fire>=0.5",
+    "tqdm>=4.60",
+    "rank-bm25>=0.2",
+    "transformers>=4.40",
+    "torch>=2.0",
+    "accelerate>=0.26.0",
+    "sentence-transformers>=2.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "flake8>=7.0",
+    "mypy>=1.0",
+    "types-tqdm>=4.66.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.mypy]
+python_version = "3.10"
+exclude = ["data/", "datasets/"]
+
+[[tool.mypy.overrides]]
+module = [
+    "rank_bm25.*",
+    "rank_bm25",
+    "fire.*",
+    "fire",
+    "sentence_transformers.*",
+]
+ignore_missing_imports = true
